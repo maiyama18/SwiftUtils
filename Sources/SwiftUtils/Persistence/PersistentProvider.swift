@@ -4,6 +4,11 @@ public final class PersistentProvider {
     public struct Transformer {
         public let name: String
         public let valueTransformer: ValueTransformer
+        
+        public init(name: String, valueTransformer: ValueTransformer) {
+            self.name = name
+            self.valueTransformer = valueTransformer
+        }
     }
     
     public let persistentContainer: NSPersistentCloudKitContainer
