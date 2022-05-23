@@ -14,13 +14,6 @@ public enum CommonRouting {
         originVC.present(alertController, animated: true)
     }
     
-    public static func showImageViewer(from originVC: UIViewController, image: UIImage) {
-        let viewer = ImageViewerViewController(image: image)
-        viewer.modalTransitionStyle = .crossDissolve
-        viewer.modalPresentationStyle = .fullScreen
-        originVC.present(viewer, animated: true)
-    }
-    
     public static func showCamera<C: UIViewController>(from originVC: C, allowsEditing: Bool)
         where C: UIImagePickerControllerDelegate & UINavigationControllerDelegate
     {
