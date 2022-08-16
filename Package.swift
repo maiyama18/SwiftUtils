@@ -15,6 +15,12 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftUtils",
-            dependencies: [])
+            dependencies: [],
+            swiftSettings: [
+                .unsafeFlags([
+                    "-strict-concurrency=minimal",
+                ])
+            ]
+        )
     ]
 )
